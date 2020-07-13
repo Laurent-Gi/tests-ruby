@@ -23,7 +23,6 @@ def ctof(temp_c)
 
 end
 
-
 # puts ftoc(32)   # 0
 # puts ftoc(212)  # 100
 # puts ftoc(222)  # 100.555555555556
