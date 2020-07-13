@@ -13,9 +13,6 @@ end
 
 def translate_un_mot(str)
 
-  # /[aeiouy].*/ =~ str
-  # /[^aeiouy].*/ =~ str
-
   if /^[aeiouy]/ =~ str then
     # Commence par une voyelle
     ajout_ay(str)
@@ -46,15 +43,11 @@ def translate_phrase(str)
 end
 
 def translate(str)
-
   if nombre_de_mots(str) < 1
     str
-  elsif nombre_de_mots(str) > 1
-    #  "UNE PHRASE"
+  elsif nombre_de_mots(str) > 1  # -----  "UNE PHRASE"
     translate_phrase(str)
-  else
-    #    "UN MOT"
+  else                           # -----    "UN MOT"
     translate_un_mot(str)
   end
-
 end
