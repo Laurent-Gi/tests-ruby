@@ -17,7 +17,6 @@ describe "the greet function" do
     expect(greet("Bob")).to eq("Hello, Bob!")
   end
 
-
   it "says hello to not a float" do
     expect(greet(1.278)).to eq("Hello, 1.278!")
   end

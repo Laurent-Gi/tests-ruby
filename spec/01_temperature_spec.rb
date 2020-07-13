@@ -20,6 +20,11 @@ describe "temperature conversion functions" do
       expect(ftoc(68)).to eq(20)
     end
 
+    # Ajout d'un calcul qui ne tombe pas juste (pas un integer en sortie)
+    it "converts randomize temperature" do
+      expect(ftoc(78.47)).to be_within(0.1).of(25.8)
+    end    
+
   end
 
   describe "#ctof" do
